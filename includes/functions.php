@@ -344,7 +344,7 @@
 			//then send the email
 			$subject = "Activate Account";
 			$msg = "Hello {$username}, Please activate your account by clicking <a href='http://localhost/" . URL . "activate?email={$email}&confirmationcode={$code}'>here</a>. If you can not view the link please click here http://localhost" . URL . "activate?email={$email}&code={$code}";
-			$headers "<JCoNet Community><admin@mydomain.com>";
+			$headers = "<JCoNet Community><admin@mydomain.com>";
 
 			//dont for get we have the email from the user's input in the form
 			send_email($email, $subject, $msg, $headers);
